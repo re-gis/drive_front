@@ -20,9 +20,9 @@ List<Page<dynamic>> onGenerateAppViewPages(
   if (state == AuthRouteState.initializing) {
     return [SplashPage.page()];
   } else if (state == AuthRouteState.authenticated) {
-    return [HomePage.page()];
-  } else if (state == AuthRouteState.creatingProfile) {
     return [WelcomeProfilePage.page()];
+  } else if (state == AuthRouteState.creatingProfile) {
+    return [HomePage.page()];
   } else {
     return [WelcomePage.page(), WelcomePage.page()];
   }
@@ -32,21 +32,13 @@ AuthRouteState getRouteState(
   AuthState authState,
   ProfileState profileState,
 ) {
-  return AuthRouteState.authenticated;
-  // if (authState is AppInitializing ||
-  //     (authState is Authenticated &&
-  //         profileState.status == ProfileStatus.loading)) {
-  //   return AuthRouteState.initializing;
-  // } else if (authState is Authenticated &&
-  //     (profileState.status == ProfileStatus.success ||
-  //         profileState.status == ProfileStatus.updateLoading)) {
-  //   return AuthRouteState.authenticated;
-  // } else if (authState is Authenticated &&
-  //     (profileState.status == ProfileStatus.notCreated ||
-  //         profileState.status == ProfileStatus.created ||
-  //         profileState.status == ProfileStatus.createLoading)) {
-  //   return AuthRouteState.creatingProfile;
-  // } else {
-  //   return AuthRouteState.unauthenticated;
-  // }
+  if (authState is AppInitializing || (authState is Authenticated && profileState.status == ProfileStatus.loading)) {
+    return AuthRouteState.initializing;
+  } else if (authState is Authenticated && (profileState.status == ProfileStatus.success || profileState.status == ProfileStatus.updateLoading)) {
+    return AuthRouteState.authenticated;
+  } else if (authState is Authenticated && (profileState.status == ProfileStatus.notCreated || profileState.status == ProfileStatus.created || profileState.status == ProfileStatus.createLoading)) {
+    return AuthRouteState.creatingProfile;
+  } else {
+    return AuthRouteState.unauthenticated;
+  }
 }
