@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380678109482",
+    "project_id": "datenightlive-7c307",
+    "storage_bucket": "datenightlive-7c307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380678109482:android:10ebda59433a0f383a0653",
+        "android_client_info": {
+          "package_name": "com.emma.DNL"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTjZb1ULQBbI5UIbv6D1I9xvymhVZwras"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
