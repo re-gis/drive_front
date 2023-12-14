@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "380678109482",
-    "project_id": "datenightlive-7c307",
-    "storage_bucket": "datenightlive-7c307.appspot.com"
+    "project_number": "602509892472",
+    "project_id": "datenightlive-81243",
+    "storage_bucket": "datenightlive-81243.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:380678109482:android:10ebda59433a0f383a0653",
+        "mobilesdk_app_id": "1:602509892472:android:d89b48b6ef05466fe9468d",
         "android_client_info": {
           "package_name": "com.emma.DNL"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "602509892472-9k65fln5r4bhtteuhd6luq78g5i78c78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBTjZb1ULQBbI5UIbv6D1I9xvymhVZwras"
+          "current_key": "AIzaSyCVQH99hs6eDsolcwoo9DsU8mEa5VPKR48"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602509892472-9k65fln5r4bhtteuhd6luq78g5i78c78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
