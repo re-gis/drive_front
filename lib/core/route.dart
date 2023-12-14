@@ -22,7 +22,7 @@ List<Page<dynamic>> onGenerateAppViewPages(
   } else if (state == AuthRouteState.authenticated) {
     return [WelcomeProfilePage.page()];
   } else if (state == AuthRouteState.creatingProfile) {
-    return [HomePage.page()];
+    return [WelcomeProfilePage.page()];
   } else {
     return [WelcomePage.page(), WelcomePage.page()];
   }
