@@ -85,115 +85,119 @@ class _GenrePageState extends State<GenrePage> {
         ),
         // GenreList(),
         Expanded(
-          // child: Image.asset(
-          //   "assets/avatars/1.png",
-          //   fit: BoxFit.cover,
-          // ),
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            padding:
-                const EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 0),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
-              // borderRadius: BorderRadius.only(
-              //     topLeft: Radius.circular(40), topRight: Radius.circular(40)),
-            ),
-            child: Dismissible(
-              key: Key("item"),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Stack(
-                  children: [
-                    Image.asset(
-                      "assets/avatars/1.png",
-                      width: double.infinity,
-                      height: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
-                    Positioned(
-                      top: 15,
-                      left: 15,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(7.5),
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
-                          child: Container(
-                              // width: 80,
-                              // width: double.infinity,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.2),
-                              ),
-                              padding: const EdgeInsets.only(
-                                  left: 6.0, top: 4.0, right: 8.0, bottom: 4.0),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/icons/location.png",
-                                  ),
-                                  const SizedBox(
-                                    width: 2,
-                                  ),
-                                  const Text(
-                                    "1mi away",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.white,
+          child: GestureDetector(
+            onTap: () {
+              print("hello");
+            },
+            child: Container(
+              width: double.infinity,
+              height: double.infinity,
+              padding: const EdgeInsets.only(
+                  left: 15, right: 15, top: 10, bottom: 0),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 255, 255, 255),
+                // borderRadius: BorderRadius.only(
+                //     topLeft: Radius.circular(40), topRight: Radius.circular(40)),
+              ),
+              child: Dismissible(
+                key: Key("item"),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        "assets/avatars/1.png",
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      Positioned(
+                        top: 15,
+                        left: 15,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(7.5),
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
+                            child: Container(
+                                // width: 80,
+                                // width: double.infinity,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.2),
+                                ),
+                                padding: const EdgeInsets.only(
+                                    left: 6.0,
+                                    top: 4.0,
+                                    right: 8.0,
+                                    bottom: 4.0),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/icons/location.png",
                                     ),
-                                  ),
-                                ],
-                              )),
+                                    const SizedBox(
+                                      width: 2,
+                                    ),
+                                    const Text(
+                                      "1mi away",
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                )),
+                          ),
                         ),
                       ),
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      child: ClipRect(
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
-                          child: Container(
-                            width: 80,
-                            // width: double.infinity,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.3),
+                      Positioned(
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        child: ClipRect(
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
+                            child: Container(
+                              width: 80,
+                              // width: double.infinity,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                color: Colors.black.withOpacity(0.3),
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                    const Positioned(
-                        bottom: 24,
-                        left: 20,
-                        child: Text(
-                          "Jessica Parker, 24",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                          ),
-                        )),
-                    const Positioned(
-                        bottom: 12,
-                        left: 20,
-                        child: Icon(
-                          Icons.circle,
-                          color: Colors.green,
-                          size: 12,
-                        )),
-                    const Positioned(
-                        bottom: 6,
-                        left: 36,
-                        child: Text(
-                          "Recently Active",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        )),
-                  ],
+                      const Positioned(
+                          bottom: 24,
+                          left: 20,
+                          child: Text(
+                            "Jessica Parker, 24",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                            ),
+                          )),
+                      const Positioned(
+                          bottom: 12,
+                          left: 20,
+                          child: Icon(
+                            Icons.circle,
+                            color: Colors.green,
+                            size: 12,
+                          )),
+                      const Positioned(
+                          bottom: 6,
+                          left: 36,
+                          child: Text(
+                            "Recently Active",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                          )),
+                    ],
+                  ),
                 ),
               ),
             ),
