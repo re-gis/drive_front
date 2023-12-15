@@ -31,8 +31,8 @@ bool isNetworkImage(String url) {
 }
 
 Future<String> uploadFile(String path, File file) async {
-  FirebaseStorage storage = FirebaseStorage.instance;
-  Reference ref = storage.ref().child(path);
+  final storageRef = FirebaseStorage.instance.ref();
+  Reference ref = storageRef.child(path);
   UploadTask uploadTask = ref.putFile(file);
   String url = "";
   await uploadTask.whenComplete(() async {
