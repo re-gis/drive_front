@@ -1,3 +1,4 @@
+import 'package:DNL/view/main/main_page.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:DNL/core/values/custom_text_style.dart';
@@ -71,8 +72,12 @@ class WelcomePage extends StatelessWidget {
                                   title: "SIGN IN",
                                   outlined: true,
                                   onPressed: () {
-                                    Navigator.of(context)
-                                        .push<void>(SignupPage.route());
+                                    Navigator.of(context).push<void>(
+                                      SignupPage.route(),
+                                      // MaterialPageRoute(
+                                      //     builder: (context) =>
+                                      //         const MainPage()),
+                                    );
                                   })),
                           const SizedBox(width: 8),
                         ]),

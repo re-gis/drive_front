@@ -149,7 +149,7 @@ class _MatchListState extends State<MatchList> {
                             filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                             child: Container(
                               width: 80,
-                              height: 40,
+                              height: 50,
                               decoration: BoxDecoration(
                                 color: Colors.black.withOpacity(0.5),
                                 border: const Border(
